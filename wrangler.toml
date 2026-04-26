@@ -1,0 +1,19 @@
+# Cloudflare D1 & R2 Configuration for Footwear Track & Safe
+
+# ======================
+# D1 Database Setup
+# ======================
+[[d1_databases]]
+binding = "DB"
+database_name = "footwear-track-safe"
+database_id = "<your-d1-database-id>"
+
+# ======================
+# R2 Object Storage
+# ======================
+[[r2_buckets]]
+binding = "R2_BUCKET"
+bucket_name = "footwear-track-safe"
+
+[vars]
+ENV = "development"

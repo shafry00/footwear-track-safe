@@ -1,0 +1,20 @@
+{
+  "name": "footwear-track-safe-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "deploy:d1": "wrangler d1 execute footwear-d1 --local --file=schema.sql",
+    "generate-credentials": "wrangler d1 execute footwear-d1 --local --command=\"SELECT username, password_hash FROM owner_auth\""
+  },
+  "dependencies": {
+    "@cloudflare/workers-types": "^4.20241127.0",
+    "hono": "^4.7.11",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "wrangler": "^3.97.0"
+  }
+}
